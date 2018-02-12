@@ -10,7 +10,7 @@ out vec2 argPosition;
 out vec2 argTexCoord;
 
 void main() {
-	gl_Position = vec4((inPosition.xy / uViewport) * 2.0 - 0.4, 0.0, 1.0);
+	gl_Position = vec4((inPosition.xy / uViewport) * 2.0 - 1.0, 0.0, 1.0);
 	argPosition = gl_Position.xy;
 	argTexCoord = inTexCoord;
 }

@@ -15,7 +15,7 @@ void main() {
 	vec2 diff = uLightPosition - argPosition;
 	float distance = sqrt(diff.x * diff.x + diff.y * diff.y);
 	vec3 direction = normalize(vec3(diff.xy, 1.0));
-	vec3 normal = texture(uNormalMap, argTexCoord).xyz;
+	vec3 normal = (texture(uNormalMap, argTexCoord).xyz - vec3(0.5, 0.5, 0.5)) * 2.0;
 	vec3 color = texture(uTexture, argTexCoord).xyz;
 	float normalCoef = dot(direction, normal);
 	outColor = vec4(color.xyz, 1.0) * normalCoef;

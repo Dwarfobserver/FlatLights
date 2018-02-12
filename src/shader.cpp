@@ -41,7 +41,6 @@ namespace fl {
 		GLchar const * const pCode = code.c_str();
 		glShaderSource(id_, 1, &pCode, nullptr);
 		glCompileShader(id_);
-		GL_CHECK_ERRORS();
 
 		// Check compilation errors
 		int logLength;
@@ -51,7 +50,6 @@ namespace fl {
 			glGetShaderInfoLog(id_, logLength, nullptr, errorMessage.data());
 			throw std::runtime_error{ errorMessage };
 		}
-		GL_CHECK_ERRORS();
 	}
 
 	shader::~shader() noexcept {

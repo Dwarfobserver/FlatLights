@@ -15,7 +15,6 @@ namespace fl {
 		glAttachShader(id_, vertexShader.id());
 		glAttachShader(id_, fragmentShader.id());
 		glLinkProgram(id_);
-		GL_CHECK_ERRORS();
 
 		// Check program
 		int logLength;
@@ -29,7 +28,6 @@ namespace fl {
 		// Detach shaders
 		glDetachShader(id_, vertexShader.id());
 		glDetachShader(id_, fragmentShader.id());
-		GL_CHECK_ERRORS();
 	}
 
 	shader_program::~shader_program() noexcept {

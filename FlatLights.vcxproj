@@ -23,17 +23,21 @@
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\shader_program.cpp" />
     <ClCompile Include="src\stb_image.cpp" />
-    <ClCompile Include="src\texture.cpp" />
-    <ClCompile Include="src\texture_storage.cpp" />
+    <ClCompile Include="src\textures_manager.cpp" />
+    <ClCompile Include="src\textures_manager2.cpp" />
+    <ClCompile Include="src\texture_view.cpp" />
     <ClCompile Include="src\utils.cpp" />
     <ClCompile Include="src\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\fwd_opengl.hpp" />
+    <ClInclude Include="include\pointer_iterators.hpp" />
     <ClInclude Include="include\shader.hpp" />
     <ClInclude Include="include\shader_program.hpp" />
-    <ClInclude Include="include\texture.hpp" />
-    <ClInclude Include="include\texture_storage.hpp" />
+    <ClInclude Include="include\slot_map.hpp" />
+    <ClInclude Include="include\sprite.hpp" />
+    <ClInclude Include="include\textures_manager.hpp" />
+    <ClInclude Include="include\texture_view.hpp" />
     <ClInclude Include="include\utils.hpp" />
     <ClInclude Include="include\window.hpp" />
   </ItemGroup>
@@ -111,7 +115,7 @@
       <SDLCheck>true</SDLCheck>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)include\;$(SolutionDir)dependencies\include\</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
@@ -135,7 +139,7 @@
       <SDLCheck>true</SDLCheck>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)include\;$(SolutionDir)dependencies\include\</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
