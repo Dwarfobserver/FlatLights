@@ -32,7 +32,7 @@ int main(int argc, char** argv)
 		GLuint vao;
 		glGenVertexArrays(1, &vao);
 		glBindVertexArray(vao);
-		auto deleteVao = fl::defer([&] { glDeleteVertexArrays(1, &vao); });
+		const auto deleteVao = fl::defer([&] { glDeleteVertexArrays(1, &vao); });
 
 		const fl::shader basicVertex  { fl::shader_type::vertex  , "shaders/basic.vert" };
 		const fl::shader basicFragment{ fl::shader_type::fragment, "shaders/basic.frag" };
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
 
 		fl::sprite scarecrow;
 		scarecrow.texture = hScarecrow;
-		scarecrow.position = { 50, 100 };/*
+		scarecrow.position = { 200, 100 };/*
 		fl::sprite frog;
 		frog.texture = hFrog;
 		frog.position = { 350, 100 };
